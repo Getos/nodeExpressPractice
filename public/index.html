@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
+    <script type="module" src="../js/main.js" defer></script>
 </head>
 <body>
+    <h1>find your things in local database </h1>
+<form id="add-post-form">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <button type="submit"> add post    </button>
+</form>
 <div>
-    <h1>this is homepage    </h1>
+<button id="get-posts-btn">get post</button>
+<div id="output">    </div>
+
 </div>
 </body>
 </html>
