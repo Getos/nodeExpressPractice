@@ -1,0 +1,13 @@
+{
+  "name": "nodeexpresspractice",
+  "version": "1.0.0",
+  "description": "settingup server with express",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --env-file=.env --watch server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
