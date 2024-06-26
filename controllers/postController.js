@@ -44,3 +44,34 @@ export const createPost = (req, res, next) => {
     posts.push(newPost);
     res.status(201).json(posts);
 };
+
+//@desc  update new post
+// @route   PUT /api/posts
+export const updatePost = (req, res, next) => {
+    const id = parseInt(req.params.id);
+    const post = posts.find((post) => post.id === id)
+    if (!post) {
+        const error = new Error(`post was not found`)
+        error.status = 404;
+        return next(error)
+            
+    }
+    post.title = req.body.title;
+    res.status(200).json(posts);
+}
+
+//@desc     delete post
+// @route   DELETE /api/posts
+
+export const deletePost = (req, res, next) => {
+    const id = parseInt(req.params.id);
+    const post = posts.find((post) => post.id === id);
+    if (!post) {
+        const error = new Error(`post was not found`)
+        error.status = 404;
+        return next(error)
+    }
+    post = posts.filter((post) => post.id !== id)
+    res.status(200).json(posts)
+        
+}
